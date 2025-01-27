@@ -1,11 +1,13 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -24,6 +26,10 @@ const config: Config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          gradient: {
+            start: "#00DC82",
+            end: "#36E4DA",
+          },
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -64,10 +70,32 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "gradient-y": {
+          "0%, 100%": {
+            "background-size": "400% 400%",
+            "background-position": "center top"
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "center center"
+          }
+        },
+        "text-gradient": {
+          "0%, 100%": {
+            "background-size": "200% auto",
+            "background-position": "0% center"
+          },
+          "50%": {
+            "background-size": "200% auto",
+            "background-position": "100% center"
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "gradient-y": "gradient-y 8s ease infinite",
+        "text-gradient": "text-gradient 8s ease infinite",
       },
     },
   },

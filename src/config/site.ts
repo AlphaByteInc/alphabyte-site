@@ -1,27 +1,35 @@
 export const siteConfig = {
-  name: "AlphaByte",
-  description: "Building the future of technology, one byte at a time.",
+  name: "AlphaByte AI",
+  description: "最先端のAI技術で、ソフトウェア開発の未来を創造する",
   mainNav: [
     {
-      title: "Home",
+      title: "ホーム",
       href: "/",
     },
     {
-      title: "About",
+      title: "ソリューション",
+      href: "/solutions",
+    },
+    {
+      title: "テクノロジー",
+      href: "/technology",
+    },
+    {
+      title: "会社概要",
       href: "/about",
     },
     {
-      title: "Services",
-      href: "/services",
+      title: "採用情報",
+      href: "/careers",
     },
     {
-      title: "Contact",
+      title: "お問い合わせ",
       href: "/contact",
     },
   ],
   links: {
-    twitter: "https://twitter.com/alphabyte",
-    github: "https://github.com/alphabyte",
-    linkedin: "https://linkedin.com/company/alphabyte",
+    twitter: "https://twitter.com/alphabyte_ai",
+    github: "https://github.com/alphabyte-ai",
+    linkedin: "https://linkedin.com/company/alphabyte-ai",
   },
 }

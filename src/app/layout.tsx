@@ -7,8 +7,8 @@ import { SiteHeader } from "@/components/site-header"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "AlphaByte",
-  description: "Building the future of technology, one byte at a time.",
+  title: "AlphaByte AI",
+  description: "最先端のAI技術で、ソフトウェア開発の未来を創造する",
 }
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ja" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
