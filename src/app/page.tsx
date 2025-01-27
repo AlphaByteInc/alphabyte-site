@@ -1,22 +1,40 @@
 import Link from "next/link"
 import { ArrowRight, Bot, Code2, Cpu, GitBranch, Globe2, LineChart } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { SparklesCore } from "@/components/ui/sparkles"
+import { Globe } from "@/components/ui/globe"
+import { GooeyText } from "@/components/ui/gooey-text-morphing"
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-black">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="py-24 sm:py-32">
             <div className="text-center">
               <div className="relative z-20">
-                <h1 className="inline-block text-5xl font-bold tracking-tight sm:text-7xl bg-gradient-to-r from-primary-gradient-start to-primary-gradient-end text-transparent bg-clip-text animate-text-gradient">
+                <h1 className="inline-block text-5xl font-bold tracking-tight sm:text-7xl text-white">
                   開発の未来を、
                   <br />
                   AIと共に創る
                 </h1>
-                <p className="mt-6 text-xl leading-8 text-muted-foreground max-w-2xl mx-auto">
+                <div className="h-[100px] mt-6">
+                  <GooeyText
+                    texts={[
+                      "より速く",
+                      "より賢く",
+                      "より効率的に",
+                      "より創造的に",
+                      "より革新的に",
+                    ]}
+                    morphTime={1}
+                    cooldownTime={2}
+                    className="font-bold text-white"
+                    textClassName="text-4xl sm:text-5xl"
+                  />
+                </div>
+                <p className="mt-6 text-xl leading-8 text-neutral-300 max-w-2xl mx-auto">
                   最先端のAI技術で、あなたのコードをもっと洗練された、
                   より優れたものへ。開発の新時代を、共に切り拓きましょう。
                 </p>
@@ -38,22 +56,77 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-background to-background/50 z-10" />
-        <div className="absolute inset-0 w-full h-full animate-gradient-y">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-gradient-start/30 to-primary-gradient-end/30 blur-3xl" />
+        {/* Sparkles background */}
+        <div className="absolute inset-0 w-full h-full">
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={0.6}
+            maxSize={1.4}
+            particleDensity={70}
+            className="w-full h-full"
+            particleColor="#00DC82"
+            speed={0.8}
+          />
+        </div>
+      </section>
+
+      {/* Global Section */}
+      <section className="py-24 sm:py-32 relative overflow-hidden bg-black">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-base font-semibold leading-7 text-primary">GLOBAL</h2>
+            <p className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-primary-gradient-start to-primary-gradient-end text-transparent bg-clip-text">
+              世界中で選ばれる
+              <br />
+              AIソリューション
+            </p>
+            <p className="mt-6 text-lg leading-8 text-neutral-300">
+              AlphaByte AIは、世界40カ国以上で利用されています。
+              グローバルな開発チームと共に、最先端のAI技術を提供し続けています。
+            </p>
+          </div>
+          <div className="relative mt-16 h-[600px]">
+            <Globe className="mx-auto" />
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="text-center z-10">
+                <div className="stats grid grid-cols-2 gap-8 mt-[400px]">
+                  <div className="stat">
+                    <div className="text-4xl font-bold bg-gradient-to-r from-primary-gradient-start to-primary-gradient-end text-transparent bg-clip-text">40+</div>
+                    <div className="text-sm text-neutral-300 mt-1">Countries</div>
+                  </div>
+                  <div className="stat">
+                    <div className="text-4xl font-bold bg-gradient-to-r from-primary-gradient-start to-primary-gradient-end text-transparent bg-clip-text">1M+</div>
+                    <div className="text-sm text-neutral-300 mt-1">Developers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Sparkles background */}
+        <div className="absolute inset-0 w-full h-full">
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={30}
+            className="w-full h-full"
+            particleColor="#00DC82"
+            speed={0.3}
+          />
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24 sm:py-32 relative overflow-hidden">
+      <section className="py-24 sm:py-32 relative overflow-hidden bg-black">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-base font-semibold leading-7 text-primary">INNOVATION</h2>
             <p className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-primary-gradient-start to-primary-gradient-end text-transparent bg-clip-text">
               次世代の開発体験
             </p>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            <p className="mt-6 text-lg leading-8 text-neutral-300">
               AIがあなたの開発プロセスを革新的に変革。
               コーディングからテストまで、すべてをスマートに。
             </p>
@@ -62,15 +135,15 @@ export default function Home() {
             <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
               {features.map((feature) => (
                 <div key={feature.name} className="relative group">
-                  <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-muted/50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 rounded-2xl" />
+                  <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-neutral-900/50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 rounded-2xl" />
                   <div className="relative z-10">
                     <div className="flex items-center gap-x-3">
                       <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-primary-gradient-start to-primary-gradient-end">
                         {feature.icon}
                       </div>
-                      <h3 className="text-lg font-semibold leading-8">{feature.name}</h3>
+                      <h3 className="text-lg font-semibold leading-8 text-white">{feature.name}</h3>
                     </div>
-                    <p className="mt-6 text-base leading-7 text-muted-foreground">
+                    <p className="mt-6 text-base leading-7 text-neutral-300">
                       {feature.description}
                     </p>
                     <div className="mt-6">
@@ -87,17 +160,29 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Sparkles background */}
+        <div className="absolute inset-0 w-full h-full">
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={40}
+            className="w-full h-full"
+            particleColor="#00DC82"
+            speed={0.5}
+          />
+        </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 sm:py-32 relative">
+      <section className="py-24 sm:py-32 relative bg-black">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="text-center">
               <h2 className="text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-primary-gradient-start to-primary-gradient-end text-transparent bg-clip-text">
                 実績が証明する、確かな価値
               </h2>
-              <p className="mt-4 text-lg leading-8 text-muted-foreground">
+              <p className="mt-4 text-lg leading-8 text-neutral-300">
                 世界中の開発者が選ぶ、信頼のAIソリューション
               </p>
             </div>
@@ -105,9 +190,9 @@ export default function Home() {
               {stats.map((stat) => (
                 <div
                   key={stat.id}
-                  className="relative overflow-hidden rounded-2xl border bg-background p-8 group hover:border-primary/50 transition-colors"
+                  className="relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/50 p-8 group hover:border-primary/50 transition-colors"
                 >
-                  <dt className="text-sm font-semibold leading-6 text-muted-foreground">
+                  <dt className="text-sm font-semibold leading-6 text-neutral-300">
                     {stat.name}
                   </dt>
                   <dd className="mt-2 text-4xl font-bold tracking-tight bg-gradient-to-r from-primary-gradient-start to-primary-gradient-end text-transparent bg-clip-text">
@@ -118,20 +203,29 @@ export default function Home() {
             </dl>
           </div>
         </div>
+        {/* Sparkles background */}
+        <div className="absolute inset-0 w-full h-full">
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={30}
+            className="w-full h-full"
+            particleColor="#00DC82"
+            speed={0.3}
+          />
+        </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative isolate mt-32 px-6 py-32 sm:mt-56 sm:py-40 lg:px-8">
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-gradient-start/30 to-primary-gradient-end/30 animate-gradient-y" />
-        </div>
+      <section className="relative isolate mt-32 px-6 py-32 sm:mt-56 sm:py-40 lg:px-8 bg-black">
         <div className="mx-auto max-w-2xl text-center relative z-10">
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl text-foreground">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl text-white">
             あなたのプロジェクトを、
             <br />
             次のレベルへ
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-neutral-300">
             AIの力で、開発の限界を超える。
             今すぐ始めましょう。
           </p>
@@ -152,6 +246,18 @@ export default function Home() {
               <Link href="/contact">お問い合わせ</Link>
             </Button>
           </div>
+        </div>
+        {/* Sparkles background */}
+        <div className="absolute inset-0 w-full h-full">
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={50}
+            className="w-full h-full"
+            particleColor="#00DC82"
+            speed={0.4}
+          />
         </div>
       </section>
     </>
