@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button"
 import { SparklesCore } from "@/components/ui/sparkles"
 import { Globe } from "@/components/ui/globe"
 import { GooeyText } from "@/components/ui/gooey-text-morphing"
+import { DemoHeroGeometric } from "@/components/ui/shape-landing-hero.demo"
 
 export default function Home() {
   return (
     <>
+      <DemoHeroGeometric />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-black">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
