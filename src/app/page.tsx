@@ -6,11 +6,13 @@ import { Globe } from "@/components/ui/globe"
 import { GooeyText } from "@/components/ui/gooey-text-morphing"
 import { DemoHeroGeometric } from "@/components/ui/shape-landing-hero.demo"
 import { TimelineDemo } from "@/components/ui/timeline.demo"
+import { Section as VortexSection } from "@/components/ui/vortex.demo"
 
 export default function Home() {
   return (
     <main>
       <DemoHeroGeometric />
+      <VortexSection />
       <TimelineDemo />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-black">
