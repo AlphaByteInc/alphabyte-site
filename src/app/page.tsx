@@ -11,8 +11,8 @@ import { Section as VortexSection } from "@/components/ui/vortex.demo"
 export default function Home() {
   return (
     <main>
-      <DemoHeroGeometric />
       <VortexSection />
+      <DemoHeroGeometric />
       <TimelineDemo />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-black">
