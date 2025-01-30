@@ -5,17 +5,22 @@ import { Vortex } from "@/components/ui/vortex";
 
 function Section() {
   return (
-    <div className="w-[calc(100%-4rem)] mx-auto rounded-md  h-[30rem] overflow-hidden">
+    <div className="w-[calc(100%-4rem)] mx-auto rounded-md h-[30rem] overflow-hidden">
       <Vortex
         backgroundColor="black"
+        particleCount={200}
+        rangeSpeed={1.0}
         className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
       >
         <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
-        AlphaByte
+          AlphaByte
         </h2>
         <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
-          生成AIでクリエイティブを解放する
+          最先端のAI技術でソフトウェア開発の未来を創造する
         </p>
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+          
+        </div>
       </Vortex>
     </div>
   );

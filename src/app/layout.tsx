@@ -4,12 +4,12 @@ import { Noto_Sans_JP } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SiteHeader } from "@/components/site-header"
-import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["500"],
+  preload: true,
   variable: "--font-noto-sans-jp",
 })
 
@@ -37,7 +37,6 @@ export default function RootLayout({
             <div className="flex-1">{children}</div>
           </div>
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   )
